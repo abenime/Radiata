@@ -404,6 +404,45 @@ EOF
     for name in org.gnome.Loupe eog org.gnome.eog; do
         cp "$ROOT/assets/icons/camera.svg" "$ICON_DIR/scalable/apps/$name.svg"
     done
+    for name in org.gnome.Firmware gnome-firmware firmware firmware-updater; do
+        cp "$ROOT/assets/icons/firmware.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in org.gnome.SimpleScan simple-scan document-scanner; do
+        cp "$ROOT/assets/icons/scanner.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in gnome-language-selector language-selector language-selector-gnome preferences-desktop-locale org.gnome.LanguageSelector; do
+        cp "$ROOT/assets/icons/language.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in libreoffice libreoffice-startcenter org.libreoffice.LibreOffice; do
+        cp "$ROOT/assets/icons/libreoffice.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in libreoffice-writer org.libreoffice.LibreOffice.Writer; do
+        cp "$ROOT/assets/icons/writer.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in libreoffice-calc org.libreoffice.LibreOffice.Calc; do
+        cp "$ROOT/assets/icons/calc.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in libreoffice-impress org.libreoffice.LibreOffice.Impress; do
+        cp "$ROOT/assets/icons/impress.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in libreoffice-draw org.libreoffice.LibreOffice.Draw; do
+        cp "$ROOT/assets/icons/draw.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in libreoffice-base org.libreoffice.LibreOffice.Base; do
+        cp "$ROOT/assets/icons/base.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in libreoffice-math org.libreoffice.LibreOffice.Math; do
+        cp "$ROOT/assets/icons/math.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in org.gnome.Totem totem org.gnome.Showtime showtime video-player; do
+        cp "$ROOT/assets/icons/video.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in org.gnome.Characters gucharmap characters; do
+        cp "$ROOT/assets/icons/characters.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in org.gnome.Yelp yelp help-browser system-help; do
+        cp "$ROOT/assets/icons/help.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
 
     install_themed_launcher /var/lib/snapd/desktop/applications/firefox_firefox.desktop radiata-firefox
     install_themed_launcher /var/lib/snapd/desktop/applications/code_code.desktop radiata-vscode

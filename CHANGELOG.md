@@ -7,6 +7,7 @@ All notable changes to Radiata are documented here. The format follows [Keep a C
 ### Changed
 
 - Repository branding standardized as Radiata.
+- Added Radiata icons for Firmware, Document Scanner, Language Support, Video Player, Characters, Help, and the LibreOffice suite (Start Center, Writer, Calc, Impress, Draw, Base, and Math).
 
 ## [1.0.0] - 2026-11-13
 
