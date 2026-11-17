@@ -1,0 +1,25 @@
+{
+  "name": "Radiata",
+  "version": "1.0.0",
+  "tagline": "A red matrix and spider-lily theme for Ubuntu GNOME",
+  "description": "Radiata is a red cyberpunk desktop theme for Ubuntu GNOME with GTK, GNOME Shell, GDM, icons, cursors, terminal colors, and a matrix-rain wallpaper.",
+  "license": "MIT",
+  "platform": "Ubuntu GNOME",
+  "tested": {
+    "ubuntu": "26.04",
+    "gnome": "50"
+  },
+  "keywords": [
+    "ubuntu-theme",
+    "gnome-shell-theme",
+    "gtk-theme",
+    "gdm-theme",
+    "linux-rice",
+    "cyberpunk-theme",
+    "matrix-theme",
+    "red-theme",
+    "cursor-theme",
+    "icon-theme",
+    "lycoris-radiata"
+  ]
+}

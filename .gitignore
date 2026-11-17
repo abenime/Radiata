@@ -1,0 +1,17 @@
+# Local build and validation output
+.radiata-build/
+*.log
+
+# Working reference images are not release assets
+imgs/
+
+# Editor and operating-system files
+*~
+*.swp
+.DS_Store
+
+# Python tooling
+__pycache__/
+*.py[cod]
+
+# Keep intentional PNG artwork and documentation previews tracked.

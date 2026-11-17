@@ -1,0 +1,320 @@
+/* Radiata Glass: GTK 3/4 and libadwaita overrides */
+@define-color accent_color @ACCENT@;
+@define-color accent_bg_color @ACCENT@;
+@define-color accent_fg_color @BG@;
+@define-color destructive_color @ACCENT_BRIGHT@;
+@define-color destructive_bg_color @ACCENT_DIM@;
+@define-color window_bg_color @BG@;
+@define-color window_fg_color @TEXT@;
+@define-color view_bg_color @BG_ALT@;
+@define-color view_fg_color @TEXT@;
+@define-color headerbar_bg_color @PANEL@;
+@define-color headerbar_fg_color @TEXT@;
+@define-color card_bg_color rgba(26, 13, 18, 0.94);
+@define-color card_fg_color @TEXT@;
+@define-color popover_bg_color rgba(13, 8, 11, 0.96);
+@define-color popover_fg_color @TEXT@;
+@define-color dialog_bg_color rgba(10, 7, 9, 0.97);
+@define-color dialog_fg_color @TEXT@;
+@define-color sidebar_bg_color rgba(12, 7, 10, 0.95);
+@define-color sidebar_fg_color @TEXT@;
+@define-color sidebar_backdrop_color rgba(8, 6, 8, 0.95);
+@define-color sidebar_border_color @ACCENT_DIM@;
+@define-color borders @ACCENT_DIM@;
+
+window,
+.background {
+  background-color: rgba(7, 8, 10, 0.97);
+  color: @TEXT@;
+}
+
+window.csd,
+decoration {
+  border: 1px solid rgba(255, 23, 56, 0.72);
+  border-radius: 11px;
+  box-shadow: 0 0 0 1px rgba(125, 20, 40, 0.45), 0 12px 34px rgba(0, 0, 0, 0.72), 0 0 22px rgba(255, 23, 56, 0.14);
+}
+
+headerbar,
+.titlebar {
+  min-height: 42px;
+  color: @TEXT@;
+  background-color: rgba(18, 8, 12, 0.94);
+  border: none;
+  box-shadow: none;
+}
+
+headerbar:backdrop,
+.titlebar:backdrop {
+  background-color: rgba(12, 7, 9, 0.95);
+  color: @MUTED@;
+}
+
+button,
+.button {
+  color: @TEXT@;
+  background-image: none;
+  background-color: rgba(26, 13, 18, 0.92);
+  border: 1px solid rgba(125, 20, 40, 0.8);
+  border-radius: 7px;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.025);
+}
+
+button:hover,
+.button:hover {
+  color: #ffffff;
+  background-color: rgba(82, 14, 29, 0.72);
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* Keep app header bars light and readable instead of boxing every control. */
+headerbar button,
+.titlebar button {
+  color: @ACCENT_BRIGHT@;
+  background-color: transparent;
+  background-image: none;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+headerbar button:hover,
+.titlebar button:hover {
+  color: #ffffff;
+  background-color: rgba(125, 20, 40, 0.32);
+  border-color: transparent;
+  box-shadow: none;
+}
+
+headerbar button.titlebutton,
+.titlebar button.titlebutton,
+windowcontrols button {
+  min-width: 18px;
+  min-height: 18px;
+  padding: 4px;
+  color: @ACCENT@;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+headerbar button.titlebutton:hover,
+.titlebar button.titlebutton:hover,
+windowcontrols button:hover {
+  color: @ACCENT_BRIGHT@;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+button:active,
+button:checked,
+button.suggested-action,
+.button:active,
+.button:checked {
+  color: @BG@;
+  background-color: @ACCENT@;
+  border-color: @ACCENT_BRIGHT@;
+}
+
+button.destructive-action {
+  color: white;
+  background-color: @ACCENT_DIM@;
+  border-color: @ACCENT@;
+}
+
+entry,
+textview,
+textview text,
+.view,
+.content-view,
+list,
+listview,
+columnview {
+  color: @TEXT@;
+  background-color: rgba(13, 8, 11, 0.96);
+  caret-color: @ACCENT@;
+}
+
+entry,
+.search {
+  border: 1px solid rgba(125, 20, 40, 0.78);
+  border-radius: 7px;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.42);
+}
+
+entry:focus,
+.search:focus-within {
+  border-color: @ACCENT@;
+  box-shadow: 0 0 0 2px rgba(255, 23, 56, 0.19), inset 0 0 8px rgba(0, 0, 0, 0.45);
+}
+
+selection,
+*:selected {
+  color: #ffffff;
+  background-color: @ACCENT_DIM@;
+}
+
+popover,
+popover.background,
+popover.context-menu {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+
+popover > arrow,
+popover.background > arrow {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+popover > contents,
+popover.background > contents,
+popover.menu > contents,
+menu,
+dialog,
+.dialog-sheet {
+  color: @TEXT@;
+  background-color: rgba(13, 8, 11, 0.97);
+  border: 1px solid rgba(255, 23, 56, 0.48);
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.75), 0 0 18px rgba(255, 23, 56, 0.10);
+}
+
+.navigation-sidebar,
+.sidebar,
+placessidebar,
+.sidebar-pane {
+  color: @TEXT@;
+  background-color: rgba(12, 7, 10, 0.96);
+  border-right: 1px solid rgba(125, 20, 40, 0.58);
+}
+
+row,
+.navigation-sidebar row {
+  border: none;
+  box-shadow: none;
+}
+
+row:hover,
+.navigation-sidebar row:hover {
+  background-color: rgba(125, 20, 40, 0.20);
+  border: none;
+  box-shadow: none;
+}
+
+row:selected,
+.navigation-sidebar row:selected {
+  color: #ffffff;
+  background-color: rgba(125, 20, 40, 0.52);
+  border: none;
+  box-shadow: none;
+}
+
+notebook > header,
+notebook > header tabs,
+tabs,
+tabbar {
+  background-color: rgba(12, 7, 10, 0.95);
+  border: none;
+  box-shadow: none;
+}
+
+notebook tab,
+notebook tab:hover,
+notebook tab:checked,
+tab,
+tab:hover,
+tab:selected,
+tab:checked {
+  color: @TEXT@;
+  border: none;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+notebook tab:checked,
+tab:selected,
+tab:checked {
+  background-color: rgba(125, 20, 40, 0.34);
+}
+
+switch:checked,
+check:checked,
+radio:checked {
+  color: @BG@;
+  background-color: @ACCENT@;
+  border-color: @ACCENT_BRIGHT@;
+}
+
+progressbar progress,
+levelbar block.filled {
+  background-color: @ACCENT@;
+  border-color: @ACCENT_BRIGHT@;
+  box-shadow: 0 0 8px rgba(255, 23, 56, 0.32);
+}
+
+scrollbar,
+scrollbar.vertical {
+  min-width: 7px;
+  background-color: transparent;
+}
+
+scrollbar.horizontal {
+  min-height: 7px;
+  background-color: transparent;
+}
+
+scrollbar trough {
+  background-color: transparent;
+  border: none;
+}
+
+scrollbar slider,
+scrollbar.vertical slider {
+  min-width: 3px;
+  min-height: 24px;
+  margin: 2px;
+  background-color: @ACCENT_DIM@;
+  border: none;
+  border-radius: 99px;
+  box-shadow: none;
+}
+
+scrollbar.horizontal slider {
+  min-width: 24px;
+  min-height: 3px;
+}
+
+scrollbar slider:hover,
+scrollbar slider:active {
+  background-color: @ACCENT@;
+  border: none;
+  box-shadow: none;
+}
+
+tooltip,
+tooltip.background {
+  color: @TEXT@;
+  background-color: rgba(7, 8, 10, 0.98);
+  border: 1px solid @ACCENT@;
+  border-radius: 6px;
+}
+
+separator {
+  background-color: rgba(125, 20, 40, 0.48);
+}
+
+.link,
+link,
+a {
+  color: @ACCENT_BRIGHT@;
+}
+
+.dim-label {
+  color: @MUTED@;
+}

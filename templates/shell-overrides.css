@@ -1,0 +1,499 @@
+/* Radiata Glass: restrained GNOME Shell / Ubuntu Dock overrides */
+stage {
+  color: @TEXT@;
+  font-family: "@FONT@", monospace;
+}
+
+/* Top panel: one clean red edge, no red blocks behind status icons. */
+#panel,
+#panel:overview {
+  color: @TEXT@ !important;
+  background-color: rgba(7, 3, 6, 0.90) !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(255, 23, 56, 0.58) !important;
+  box-shadow: 0 2px 12px rgba(255, 23, 56, 0.10) !important;
+}
+
+#panel .panel-button,
+#panel .panel-button:focus,
+#panel .panel-button:hover,
+#panel .panel-button:active,
+#panel .panel-button:checked {
+  color: @ACCENT_BRIGHT@ !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 5px !important;
+  box-shadow: none !important;
+}
+
+#panel .panel-button:hover,
+#panel .panel-button:focus {
+  color: @ACCENT@ !important;
+  background-color: transparent !important;
+}
+
+#panel .panel-button:active,
+#panel .panel-button:checked {
+  color: @ACCENT_BRIGHT@ !important;
+  background-color: transparent !important;
+}
+
+#panel .system-status-icon {
+  color: @ACCENT_BRIGHT@ !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#panel .panel-button#panelActivities .workspace-dot {
+  color: @ACCENT@ !important;
+  background-color: @ACCENT@ !important;
+  box-shadow: none !important;
+}
+
+/* Shell popovers and dialogs keep one quiet outer edge. */
+.popup-menu-content,
+.candidate-popup-content,
+.datemenu-popover,
+.message-list,
+.calendar,
+.workspace-switcher,
+.switcher-list,
+.modal-dialog-content,
+.run-dialog,
+.end-session-dialog,
+.screenshot-ui-panel,
+.app-folder-dialog {
+  color: @TEXT@ !important;
+  background-color: rgba(8, 5, 7, 0.97) !important;
+  border: 1px solid rgba(125, 20, 40, 0.72) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.76) !important;
+}
+
+/* Date menu and notifications use the same black/red language as Quick Settings. */
+.datemenu-popover {
+  color: @TEXT@ !important;
+  background-color: rgba(7, 4, 6, 0.98) !important;
+  border: 1px solid rgba(255, 23, 56, 0.46) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.82) !important;
+}
+
+.calendar,
+.datemenu-today-button,
+.events-button,
+.world-clocks-button,
+.weather-button,
+.message,
+.message:second-in-stack,
+.message:lower-in-stack {
+  color: @TEXT@ !important;
+  background-color: rgba(12, 7, 10, 0.96) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.datemenu-today-button:hover,
+.datemenu-today-button:focus,
+.events-button:hover,
+.events-button:focus,
+.world-clocks-button:hover,
+.world-clocks-button:focus,
+.weather-button:hover,
+.weather-button:focus {
+  color: #ffffff !important;
+  background-color: rgba(54, 11, 23, 0.96) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.calendar .calendar-month-header .calendar-month-label,
+.calendar .calendar-month-header .pager-button,
+.calendar .calendar-month-header .pager-button:hover,
+.calendar .calendar-month-header .pager-button:focus {
+  color: @TEXT@ !important;
+  background-color: rgba(28, 12, 18, 0.96) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.calendar .calendar-month-header .pager-button:hover,
+.calendar .calendar-month-header .pager-button:focus {
+  color: @ACCENT_BRIGHT@ !important;
+  background-color: rgba(90, 16, 34, 0.70) !important;
+}
+
+.calendar .calendar-day,
+.calendar .calendar-day.calendar-weekend,
+.calendar .calendar-day.calendar-other-month,
+.calendar .calendar-day.calendar-other-month.calendar-weekend {
+  color: @TEXT@ !important;
+  background-color: rgba(24, 11, 16, 0.96) !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.calendar .calendar-day.calendar-weekend {
+  color: @ACCENT_BRIGHT@ !important;
+}
+
+.calendar .calendar-day.calendar-other-month,
+.calendar .calendar-day.calendar-other-month.calendar-weekend {
+  color: rgba(189, 137, 147, 0.52) !important;
+  background-color: rgba(13, 8, 11, 0.76) !important;
+}
+
+.calendar .calendar-day:hover,
+.calendar .calendar-day:focus,
+.calendar .calendar-day:selected {
+  color: #ffffff !important;
+  background-color: rgba(125, 20, 40, 0.62) !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.calendar .calendar-day.calendar-today,
+.calendar .calendar-day.calendar-today.calendar-day-with-events {
+  color: #ffffff !important;
+  background-color: rgba(166, 18, 49, 0.96) !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.calendar .calendar-day-heading,
+.calendar .calendar-week-number {
+  color: @ACCENT_BRIGHT@ !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.events-button .events-box .events-title,
+.events-button .events-box .events-list .event-box .event-time,
+.events-button .events-box .events-list .event-placeholder,
+.world-clocks-button .world-clocks-header,
+.world-clocks-button .world-clocks-header.no-world-clocks,
+.world-clocks-button .world-clocks-grid .world-clocks-timezone,
+.weather-button .weather-box .weather-header-box .weather-header,
+.weather-button .weather-box .weather-header-box .weather-header.no-location,
+.message .message-header,
+.message .message-header .message-header-content .event-time {
+  color: @MUTED@ !important;
+}
+
+.message-list {
+  border-color: rgba(125, 20, 40, 0.38) !important;
+}
+
+.message-list-controls,
+.message-list .message-list-placeholder,
+.message .message-box .message-content .message-title,
+.message .message-box .message-content .message-body {
+  color: @TEXT@ !important;
+}
+
+.message-list-controls .message-list-clear-button,
+.message .message-header .message-expand-button,
+.message .message-header .message-close-button,
+.message-notification-group .message-collapse-button,
+.message-media-control {
+  color: @ACCENT_BRIGHT@ !important;
+  background-color: rgba(28, 12, 18, 0.96) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.message-list-controls .message-list-clear-button:hover,
+.message .message-header .message-expand-button:hover,
+.message .message-header .message-close-button:hover,
+.message-notification-group .message-collapse-button:hover,
+.message-media-control:hover {
+  color: #ffffff !important;
+  background-color: rgba(90, 16, 34, 0.68) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Quick Settings: black glass base, dark-red controls, red active state. */
+.quick-settings {
+  color: @TEXT@ !important;
+  background-color: rgba(7, 4, 6, 0.98) !important;
+  border: 1px solid rgba(255, 23, 56, 0.50) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.82), 0 0 18px rgba(255, 23, 56, 0.08) !important;
+}
+
+.quick-settings-grid {
+  spacing-rows: 10px;
+  spacing-columns: 10px;
+}
+
+.quick-toggle,
+.quick-toggle-has-menu,
+.quick-toggle-has-menu .quick-toggle,
+.quick-toggle-has-menu .quick-toggle-menu-button,
+.quick-settings .button,
+.quick-settings .icon-button,
+.quick-settings-system-item .power-item,
+.quick-slider .slider-bin {
+  color: @TEXT@ !important;
+  background-color: rgba(28, 12, 18, 0.96) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.quick-toggle,
+.quick-toggle-has-menu {
+  border-radius: 11px !important;
+}
+
+.quick-toggle-has-menu .quick-toggle:ltr {
+  border-radius: 11px 0 0 11px !important;
+}
+
+.quick-toggle-has-menu .quick-toggle:rtl {
+  border-radius: 0 11px 11px 0 !important;
+}
+
+.quick-toggle-has-menu .quick-toggle-menu-button:ltr {
+  border-radius: 0 11px 11px 0 !important;
+}
+
+.quick-toggle-has-menu .quick-toggle-menu-button:rtl {
+  border-radius: 11px 0 0 11px !important;
+}
+
+.quick-toggle:hover,
+.quick-toggle:focus,
+.quick-toggle-has-menu .quick-toggle-menu-button:hover,
+.quick-toggle-has-menu .quick-toggle-menu-button:focus,
+.quick-settings .button:hover,
+.quick-settings .icon-button:hover,
+.quick-slider .slider-bin:hover,
+.quick-slider .slider-bin:focus {
+  color: #ffffff !important;
+  background-color: rgba(90, 16, 34, 0.72) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.quick-toggle:checked,
+.quick-toggle-has-menu:checked,
+.quick-toggle-has-menu .quick-toggle:checked,
+.quick-toggle-has-menu .quick-toggle-menu-button:checked {
+  color: #ffffff !important;
+  background-color: rgba(166, 18, 49, 0.92) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.quick-toggle-has-menu .quick-toggle-separator,
+.quick-toggle-has-menu:checked .quick-toggle-separator {
+  background-color: rgba(255, 77, 104, 0.34) !important;
+}
+
+.quick-toggle-menu {
+  color: @TEXT@ !important;
+  background-color: rgba(8, 5, 7, 0.98) !important;
+  border: 1px solid rgba(125, 20, 40, 0.58) !important;
+  border-radius: 13px !important;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.78) !important;
+}
+
+.quick-toggle-menu .header .icon,
+.quick-toggle-menu .header .icon.active {
+  color: @ACCENT_BRIGHT@ !important;
+  background-color: rgba(125, 20, 40, 0.30) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.popup-menu-item,
+.popup-menu-item:hover,
+.popup-menu-item:focus,
+.popup-menu-item:selected,
+.message,
+.message:hover,
+.calendar-day,
+.calendar-day:hover,
+.calendar-day:focus {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.popup-menu-item:hover,
+.popup-menu-item:focus,
+.popup-menu-item:selected,
+.message:hover,
+.calendar-day:hover,
+.calendar-day:focus {
+  color: #ffffff !important;
+  background-color: rgba(125, 20, 40, 0.28) !important;
+}
+
+.search-entry,
+StEntry {
+  color: @TEXT@ !important;
+  background-color: rgba(7, 8, 10, 0.94) !important;
+  border: 1px solid rgba(125, 20, 40, 0.58) !important;
+  selection-background-color: @ACCENT_DIM@ !important;
+  selected-color: #ffffff !important;
+  caret-color: @ACCENT@ !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+
+.search-entry:focus,
+StEntry:focus {
+  border-color: @ACCENT@ !important;
+  box-shadow: none !important;
+}
+
+/* App overview: replace Ubuntu's opaque gray with translucent red-black. */
+#overviewGroup {
+  background-color: rgba(9, 4, 7, 0.93) !important;
+  background: rgba(9, 4, 7, 0.93) !important;
+}
+
+.workspace-background {
+  background-color: rgba(18, 7, 12, 0.42) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.overview-tile,
+.grid-search-result,
+.app-well-app .overview-icon,
+.show-apps .overview-icon,
+.search-provider-icon,
+.list-search-result,
+.window-caption,
+.workspace-thumbnail,
+.overview-tile:hover,
+.overview-tile:focus,
+.grid-search-result:hover,
+.app-well-app:hover .overview-icon,
+.show-apps:hover .overview-icon,
+.list-search-result:hover {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 9px !important;
+}
+
+.overview-tile:hover,
+.overview-tile:focus,
+.grid-search-result:hover,
+.app-well-app:hover .overview-icon,
+.show-apps:hover .overview-icon,
+.list-search-result:hover {
+  color: @TEXT@ !important;
+  background-color: rgba(125, 20, 40, 0.25) !important;
+}
+
+#dashtodockContainer,
+#dashtodockContainer #dash,
+#dash,
+#dash .dash-background,
+#dashtodockContainer #dash .dash-background {
+  background-color: transparent !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Pinned apps float directly over the desktop with no hover tiles. */
+#dashtodockContainer .app-well-app .overview-icon,
+#dashtodockContainer .show-apps .overview-icon,
+#dashtodockContainer .app-well-app:hover .overview-icon,
+#dashtodockContainer .app-well-app:focus .overview-icon,
+#dashtodockContainer .app-well-app:active .overview-icon,
+#dashtodockContainer .app-well-app:checked .overview-icon,
+#dashtodockContainer .show-apps:hover .overview-icon,
+#dashtodockContainer .show-apps:focus .overview-icon,
+#dashtodockContainer .show-apps:active .overview-icon,
+#dashtodockContainer .show-apps:checked .overview-icon,
+#dash .app-well-app .overview-icon,
+#dash .show-apps .overview-icon,
+#dash .app-well-app:hover .overview-icon,
+#dash .app-well-app:focus .overview-icon,
+#dash .app-well-app:active .overview-icon,
+#dash .app-well-app:checked .overview-icon,
+#dash .show-apps:hover .overview-icon,
+#dash .show-apps:focus .overview-icon,
+#dash .show-apps:active .overview-icon,
+#dash .show-apps:checked .overview-icon {
+  background-color: transparent !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#dashtodockContainer .show-apps .overview-icon StIcon,
+#dash .show-apps .overview-icon StIcon {
+  color: @ACCENT@ !important;
+  icon-shadow: none !important;
+}
+
+#dashtodockContainer .app-well-app-running-dot,
+#dashtodockContainer .app-grid-running-dot,
+#dash .app-well-app-running-dot,
+#dash .app-grid-running-dot {
+  background-color: @ACCENT@ !important;
+  box-shadow: none !important;
+}
+
+.notification-banner,
+.message-list-section,
+.message {
+  color: @TEXT@ !important;
+  background-color: rgba(13, 8, 11, 0.97) !important;
+  border: none !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+}
+
+.button,
+.icon-button {
+  color: @TEXT@;
+  background-color: rgba(26, 13, 18, 0.90);
+  border: none;
+  box-shadow: none;
+}
+
+.button:hover,
+.button:focus,
+.icon-button:hover,
+.icon-button:focus {
+  color: #ffffff;
+  background-color: rgba(125, 20, 40, 0.34);
+  border: none;
+  box-shadow: none;
+}
+
+.slider,
+.level-bar,
+.quick-slider .slider {
+  color: @ACCENT@ !important;
+  -barlevel-active-background-color: @ACCENT@;
+  -barlevel-overdrive-color: @ACCENT_BRIGHT@;
+  -barlevel-background-color: rgba(125, 20, 40, 0.28);
+  -barlevel-border-color: transparent;
+}
+
+.workspace-thumbnail-indicator {
+  border: none !important;
+  box-shadow: inset 0 0 0 2px rgba(255, 23, 56, 0.62) !important;
+}
+
+.screenshot-ui-area-indicator,
+.resize-popup,
+.tile-preview {
+  color: @TEXT@;
+  background-color: rgba(125, 20, 40, 0.24) !important;
+  border: 1px solid @ACCENT@ !important;
+  box-shadow: none !important;
+}

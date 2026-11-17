@@ -1,0 +1,42 @@
+name: Feature request
+description: Suggest a focused improvement to Radiata
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What limitation or inconsistency should this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Explain the desired behavior or visual result.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: input
+    id: environment
+    attributes:
+      label: Ubuntu and GNOME versions
+      placeholder: "Ubuntu 26.04, GNOME 50"
+  - type: textarea
+    id: assets
+    attributes:
+      label: Asset sources and licenses
+      description: Required for suggestions containing images, icons, fonts, or logos.
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: This request fits Radiata's red matrix and Lycoris visual identity.
+          required: true
+        - label: I searched existing requests.
+          required: true

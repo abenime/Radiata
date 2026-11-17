@@ -1,0 +1,164 @@
+/* Radiata GDM login and lock screen */
+#lockDialogGroup,
+.screen-shield-background {
+  background-color: @BG@;
+  background-image: url("file:///usr/local/share/backgrounds/radiata-login.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: @TEXT@;
+}
+
+#panel.login-screen,
+#panel.unlock-screen {
+  color: @TEXT@ !important;
+  background-color: rgba(7, 3, 6, 0.90) !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(255, 23, 56, 0.58) !important;
+  box-shadow: none !important;
+}
+
+#panel.login-screen .panel-button,
+#panel.unlock-screen .panel-button,
+#panel.login-screen .panel-button:hover,
+#panel.unlock-screen .panel-button:hover,
+#panel.login-screen .panel-button:focus,
+#panel.unlock-screen .panel-button:focus,
+#panel.login-screen .panel-button:checked,
+#panel.unlock-screen .panel-button:checked {
+  color: @TEXT@ !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#panel.login-screen .panel-button:hover,
+#panel.unlock-screen .panel-button:hover,
+#panel.login-screen .panel-button:focus,
+#panel.unlock-screen .panel-button:focus {
+  color: @ACCENT_BRIGHT@ !important;
+  background-color: rgba(125, 20, 40, 0.20) !important;
+}
+
+#panel.login-screen .system-status-icon,
+#panel.unlock-screen .system-status-icon {
+  color: @TEXT@ !important;
+  background-color: transparent !important;
+}
+
+.login-dialog,
+.unlock-dialog {
+  color: @TEXT@;
+  font-family: "@FONT@", monospace;
+  background-color: transparent;
+}
+
+.login-dialog .user-widget .user-widget-label,
+.unlock-dialog .user-widget .user-widget-label,
+.unlock-dialog-clock,
+.unlock-dialog-clock .unlock-dialog-clock-time,
+.unlock-dialog-clock .unlock-dialog-clock-date,
+.unlock-dialog-clock .unlock-dialog-clock-hint {
+  color: @TEXT@;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+.login-dialog .user-widget .user-icon,
+.unlock-dialog .user-widget .user-icon {
+  color: @ACCENT_BRIGHT@;
+  background-color: rgba(7, 4, 6, 0.84);
+  border: 1px solid rgba(255, 23, 56, 0.58);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.72);
+}
+
+.login-dialog-user-list-view .login-dialog-user-list .login-dialog-user-list-item,
+.login-dialog .login-dialog-auth-list-item,
+.login-dialog-not-listed-button {
+  color: @TEXT@;
+  background-color: rgba(7, 4, 6, 0.86);
+  border: none;
+  border-radius: 11px;
+  box-shadow: none;
+}
+
+.login-dialog-user-list-view .login-dialog-user-list .login-dialog-user-list-item:hover,
+.login-dialog-user-list-view .login-dialog-user-list .login-dialog-user-list-item:focus,
+.login-dialog-user-list-view .login-dialog-user-list .login-dialog-user-list-item:selected,
+.login-dialog .login-dialog-auth-list-item:hover,
+.login-dialog .login-dialog-auth-list-item:focus,
+.login-dialog .login-dialog-auth-list-item:selected,
+.login-dialog-not-listed-button:hover,
+.login-dialog-not-listed-button:focus {
+  color: #ffffff;
+  background-color: rgba(125, 20, 40, 0.52);
+  border: none;
+  box-shadow: none !important;
+}
+
+.login-dialog-prompt-entry,
+.unlock-dialog StEntry,
+login-dialog StEntry {
+  color: @TEXT@ !important;
+  background-color: rgba(7, 4, 6, 0.94) !important;
+  border: 1px solid rgba(125, 20, 40, 0.68) !important;
+  border-radius: 9px !important;
+  caret-color: @ACCENT@ !important;
+  selection-background-color: @ACCENT_DIM@ !important;
+  selected-color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+.login-dialog-prompt-entry:focus,
+.unlock-dialog StEntry:focus,
+login-dialog StEntry:focus {
+  border-color: @ACCENT@ !important;
+  box-shadow: 0 0 12px rgba(255, 23, 56, 0.20) !important;
+}
+
+.login-dialog-button,
+.unlock-dialog .button,
+.login-dialog .button,
+.login-dialog-button:hover,
+.unlock-dialog .button:hover,
+.login-dialog .button:hover {
+  color: @TEXT@;
+  background-color: rgba(26, 13, 18, 0.92);
+  border: none;
+  box-shadow: none;
+}
+
+.login-dialog-button:hover,
+.login-dialog-button:focus,
+.unlock-dialog .button:hover,
+.unlock-dialog .button:focus,
+.login-dialog .button:hover,
+.login-dialog .button:focus {
+  color: #ffffff;
+  background-color: rgba(125, 20, 40, 0.50);
+  border: none;
+  box-shadow: none !important;
+}
+
+.login-dialog .modal-dialog-button:default,
+.login-dialog .button:default {
+  color: #ffffff;
+  background-color: rgba(166, 18, 49, 0.92);
+}
+
+.login-dialog .popup-menu-content,
+.unlock-dialog .popup-menu-content,
+.login-dialog .quick-settings,
+.unlock-dialog .quick-settings {
+  color: @TEXT@;
+  background-color: rgba(7, 4, 6, 0.97);
+  border: 1px solid rgba(255, 23, 56, 0.48);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.80);
+}
+
+.unlock-dialog-notifications-container .message,
+.unlock-dialog-notifications-container .unlock-dialog-notification-source {
+  color: @TEXT@;
+  background-color: rgba(7, 4, 6, 0.88);
+  border: none;
+  box-shadow: none;
+}

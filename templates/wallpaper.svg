@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3840" height="2160" viewBox="0 0 3840 2160">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#020203"/>
+      <stop offset="0.58" stop-color="#060305"/>
+      <stop offset="1" stop-color="#090307"/>
+    </linearGradient>
+
+    <linearGradient id="rain-a" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="@ACCENT_BRIGHT@" stop-opacity="0.92"/>
+      <stop offset="0.12" stop-color="@ACCENT@" stop-opacity="0.58"/>
+      <stop offset="0.60" stop-color="@ACCENT_DIM@" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="@ACCENT_DIM@" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="rain-b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="@TEXT@" stop-opacity="0.78"/>
+      <stop offset="0.05" stop-color="@ACCENT_BRIGHT@" stop-opacity="0.72"/>
+      <stop offset="0.48" stop-color="@ACCENT@" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="@ACCENT_DIM@" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="rain-c" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="@ACCENT@" stop-opacity="0.60"/>
+      <stop offset="0.65" stop-color="@ACCENT_DIM@" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="@ACCENT_DIM@" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="center-shade">
+      <stop offset="0" stop-color="#020203" stop-opacity="0.78"/>
+      <stop offset="0.50" stop-color="#020203" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#020203" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="matrix-rain" width="640" height="1120" patternUnits="userSpaceOnUse">
+      <g font-family="JetBrains Mono, Noto Sans Mono CJK JP, monospace" font-size="25" font-weight="500" letter-spacing="10">
+        <text x="24" y="-40" fill="url(#rain-a)" style="writing-mode:vertical-rl">生01アカ7ラ0イ1セキ9ム0ネ1ヲ4ト0リ1ス8</text>
+        <text x="82" y="170" fill="url(#rain-c)" style="writing-mode:vertical-rl">10ハ0ク1ロ6シ01ツ8メ0ヨ1ナ3キ0</text>
+        <text x="142" y="-210" fill="url(#rain-b)" style="writing-mode:vertical-rl">ヒ01ガ7ン0バ1ナ9生0零1壱5弐0参1</text>
+        <text x="205" y="340" fill="url(#rain-a)" style="writing-mode:vertical-rl">01サ8イ0フ1ア7クセ0ス1許可9</text>
+        <text x="270" y="40" fill="url(#rain-c)" style="writing-mode:vertical-rl">ラ1デ0ィ7ア1ー0タ9彼岸01花6</text>
+        <text x="334" y="-300" fill="url(#rain-a)" style="writing-mode:vertical-rl">生7零1壱0弐9参1肆0伍8陸01</text>
+        <text x="397" y="245" fill="url(#rain-b)" style="writing-mode:vertical-rl">シ0ス1テ8ム0起1動7完0了1</text>
+        <text x="460" y="-90" fill="url(#rain-c)" style="writing-mode:vertical-rl">01ネ5ツ0ト1ワ9ク0接1続7済0</text>
+        <text x="522" y="410" fill="url(#rain-a)" style="writing-mode:vertical-rl">赤1彼0岸7花01生9再0生1</text>
+        <text x="585" y="95" fill="url(#rain-b)" style="writing-mode:vertical-rl">FF1701A0C7E0S1S9生0</text>
+      </g>
+    </pattern>
+
+    <pattern id="matrix-rain-fine" width="410" height="850" patternUnits="userSpaceOnUse">
+      <g font-family="JetBrains Mono, monospace" font-size="17" letter-spacing="8" opacity="0.38">
+        <text x="30" y="80" fill="url(#rain-c)" style="writing-mode:vertical-rl">010011010101101001101</text>
+        <text x="105" y="-190" fill="url(#rain-a)" style="writing-mode:vertical-rl">101101001010011101010</text>
+        <text x="180" y="260" fill="url(#rain-c)" style="writing-mode:vertical-rl">011010011101001011001</text>
+        <text x="255" y="-40" fill="url(#rain-b)" style="writing-mode:vertical-rl">110010101011001101011</text>
+        <text x="330" y="390" fill="url(#rain-a)" style="writing-mode:vertical-rl">001101110010101001101</text>
+        <text x="395" y="120" fill="url(#rain-c)" style="writing-mode:vertical-rl">101001011010011010010</text>
+      </g>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#background)"/>
+  <rect width="3840" height="2160" fill="url(#matrix-rain-fine)"/>
+  <rect width="3840" height="2160" fill="url(#matrix-rain)"/>
+
+  <!-- Quiet center keeps the title and real flower readable. -->
+  <ellipse cx="1920" cy="1370" rx="980" ry="1050" fill="url(#center-shade)"/>
+
+  <g text-anchor="middle" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif">
+    <text x="1920" y="1080" font-family="JetBrains Mono, monospace" font-size="46" font-weight="600" letter-spacing="22" fill="@ACCENT@">LYCORIS RADIATA</text>
+    <text x="1920" y="1160" font-size="42" font-weight="400" letter-spacing="18" fill="@ACCENT_BRIGHT@">彼岸花</text>
+    <text x="1920" y="1225" font-family="JetBrains Mono, monospace" font-size="19" letter-spacing="8" fill="@ACCENT_DIM@">LIFE // BLOOM // REBIRTH</text>
+  </g>
+
+  <!-- Exact supplied flower cutout: no filter, tint, glow, or opacity effect. -->
+  <image href="spider-lily.png" x="1360" y="1300" width="1120" height="798" preserveAspectRatio="xMidYMid meet"/>
+
+  <g font-family="JetBrains Mono, monospace" font-size="18" fill="@ACCENT_DIM@" opacity="0.76">
+    <text x="70" y="2090" letter-spacing="6">RADIATA // MATRIX NODE 0XFF17</text>
+    <text x="3770" y="2090" text-anchor="end" letter-spacing="6">彼岸花 // SYSTEM ONLINE</text>
+  </g>
+</svg>

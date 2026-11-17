@@ -1,0 +1,90 @@
+name: Bug report
+description: Report an installation, restoration, or visual problem
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Remove usernames, hostnames, IP addresses, and private filenames from logs and screenshots.
+  - type: input
+    id: version
+    attributes:
+      label: Radiata version
+      placeholder: "1.0.0 or commit hash"
+    validations:
+      required: true
+  - type: input
+    id: ubuntu
+    attributes:
+      label: Ubuntu version
+      placeholder: "Output of: lsb_release -ds"
+    validations:
+      required: true
+  - type: input
+    id: gnome
+    attributes:
+      label: GNOME Shell version
+      placeholder: "Output of: gnome-shell --version"
+    validations:
+      required: true
+  - type: dropdown
+    id: session
+    attributes:
+      label: Session type
+      options: [Wayland, X11, Unknown]
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Installer
+        - Uninstaller
+        - GTK applications
+        - GNOME Shell or panel
+        - Ubuntu Dock
+        - Icons
+        - Cursor
+        - Wallpaper
+        - GDM login screen
+        - Terminal tools
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the visible or behavioral problem.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Run ...
+        2. Open ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Relevant terminal output
+      render: shell
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Drag sanitized before/after images here.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I logged out and back in after installing.
+          required: true
+        - label: I searched existing issues.
+          required: true
