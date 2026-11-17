@@ -47,8 +47,8 @@ Radiata checks for missing GSettings keys and skips unavailable options, but GNO
 Clone the repository and run the installer as your normal desktop user:
 
 ```bash
-git clone <repository-url>
-cd radiata
+git clone https://github.com/abenime/Radiata.git
+cd Radiata
 chmod +x install.sh uninstall.sh
 ./install.sh
 ```

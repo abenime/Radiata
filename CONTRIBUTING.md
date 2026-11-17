@@ -12,8 +12,8 @@ Contributions to the theme, compatibility mappings, documentation, and accessibi
 ## Development
 
 ```bash
-git clone <repository-url>
-cd radiata
+git clone https://github.com/abenime/Radiata.git
+cd Radiata
 bash -n install.sh uninstall.sh lib/common.sh
 ./install.sh
 ```
