@@ -2,8 +2,10 @@
 .radiata-build/
 *.log
 
-# Working reference images are not release assets
+# Working reference images outside the documentation tree are not release assets
 imgs/
+!docs/imgs/
+!docs/imgs/*.png
 
 # Editor and operating-system files
 *~

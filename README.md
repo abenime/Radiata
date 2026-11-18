@@ -29,6 +29,16 @@ Radiata is a red matrix cyberpunk **Ubuntu GNOME theme**. It packages a dark **G
 
 The preview above shows the included Radiata wallpaper artwork.
 
+## Screenshots
+
+<p align="center">
+  <img src="docs/imgs/1.png" alt="Radiata desktop with terminal and Files" width="49%">
+  <img src="docs/imgs/2.png" alt="Radiata desktop with Settings and Quick Settings" width="49%">
+  <br>
+  <img src="docs/imgs/3.png" alt="Radiata wallpaper and themed application dock" width="49%">
+  <img src="docs/imgs/4.png" alt="Radiata desktop with Clocks, Calendar, terminal, and Calculator" width="49%">
+</p>
+
 ## Compatibility
 
 | Component | Status |
