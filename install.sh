@@ -205,6 +205,10 @@ EOF
     backup_file_once "$HOME/.local/share/applications/snap-store_show-updates.desktop" launcher-appstore-updates.desktop
     backup_file_once "$HOME/.local/share/applications/snap-store_packagekit-session-installer.desktop" launcher-appstore-packagekit.desktop
     backup_file_once "$HOME/.local/share/applications/spotify_spotify.desktop" launcher-spotify.desktop
+    backup_file_once "$HOME/.local/share/applications/firmware-updater_firmware-updater-app.desktop" launcher-firmware-updater-app.desktop
+    backup_file_once "$HOME/.local/share/applications/firmware-updater_firmware-updater.desktop" launcher-firmware-updater.desktop
+    backup_file_once "$HOME/.local/share/applications/desktop-security-center_desktop-security-center.desktop" launcher-security-center.desktop
+    backup_file_once "$HOME/.local/share/applications/thunderbird_thunderbird.desktop" launcher-thunderbird.desktop
 
     : > "$STATE/backup.complete"
 }
@@ -411,7 +415,7 @@ EOF
     for name in org.gnome.Loupe eog org.gnome.eog; do
         cp "$ROOT/assets/icons/camera.svg" "$ICON_DIR/scalable/apps/$name.svg"
     done
-    for name in org.gnome.Firmware gnome-firmware firmware firmware-updater; do
+    for name in org.gnome.Firmware org.gnome.Firmware-symbolic gnome-firmware firmware firmware-updater firmware-updater-symbolic com.ubuntu.FirmwareUpdater radiata-firmware; do
         cp "$ROOT/assets/icons/firmware.svg" "$ICON_DIR/scalable/apps/$name.svg"
     done
     for name in org.gnome.SimpleScan simple-scan document-scanner; do
@@ -454,6 +458,48 @@ EOF
         application-x-iso9660-appimage application-x-iso9660-appimage-symbolic; do
         cp "$ROOT/assets/icons/appimage.svg" "$ICON_DIR/scalable/mimetypes/$name.svg"
     done
+    for name in org.gnome.FileRoller file-roller archive-manager; do
+        cp "$ROOT/assets/icons/file-roller.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in org.gnome.font-viewer org.gnome.FontViewer font-viewer; do
+        cp "$ROOT/assets/icons/fonts.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in org.gnome.seahorse.Application org.gnome.seahorse.Application-symbolic seahorse; do
+        cp "$ROOT/assets/icons/passwords.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in org.gnome.DejaDup deja-dup deja-dup-symbolic; do
+        cp "$ROOT/assets/icons/backups.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in org.gnome.Logs gnome-logs; do
+        cp "$ROOT/assets/icons/logs.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in org.gnome.Sysprof sysprof; do
+        cp "$ROOT/assets/icons/sysprof.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in preferences-system-network nm-connection-editor; do
+        cp "$ROOT/assets/icons/network.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in org.remmina.Remmina remmina remmina-gnome; do
+        cp "$ROOT/assets/icons/remmina.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in org.gnome.Settings-privacy org.gnome.Settings-privacy-symbolic gnome-privacy-panel com.ubuntu.SecurityCenter security-center radiata-security; do
+        cp "$ROOT/assets/icons/security.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in org.gnome.Shotwell shotwell; do
+        cp "$ROOT/assets/icons/shotwell.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in system-software-update update-manager software-updater; do
+        cp "$ROOT/assets/icons/software-updater.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in usb-creator-gtk startup-disk-creator; do
+        cp "$ROOT/assets/icons/startup-disk.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in thunderbird radiata-thunderbird; do
+        cp "$ROOT/assets/icons/thunderbird.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in org.gnome.Rhythmbox3 rhythmbox rhythmbox-client; do
+        cp "$ROOT/assets/icons/rhythmbox.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
 
     install_themed_launcher /var/lib/snapd/desktop/applications/firefox_firefox.desktop radiata-firefox
     install_themed_launcher /var/lib/snapd/desktop/applications/code_code.desktop radiata-vscode
@@ -463,6 +509,10 @@ EOF
     install_themed_launcher /var/lib/snapd/desktop/applications/snap-store_show-updates.desktop radiata-appstore
     install_themed_launcher /var/lib/snapd/desktop/applications/snap-store_packagekit-session-installer.desktop radiata-appstore
     install_themed_launcher /var/lib/snapd/desktop/applications/spotify_spotify.desktop radiata-spotify
+    install_themed_launcher /var/lib/snapd/desktop/applications/firmware-updater_firmware-updater-app.desktop radiata-firmware
+    install_themed_launcher /var/lib/snapd/desktop/applications/firmware-updater_firmware-updater.desktop radiata-firmware
+    install_themed_launcher /var/lib/snapd/desktop/applications/desktop-security-center_desktop-security-center.desktop radiata-security
+    install_themed_launcher /var/lib/snapd/desktop/applications/thunderbird_thunderbird.desktop radiata-thunderbird
 
     gtk-update-icon-cache -f -t "$ICON_DIR" >/dev/null
     command -v update-desktop-database >/dev/null && update-desktop-database "$HOME/.local/share/applications" >/dev/null 2>&1 || true

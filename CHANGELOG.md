@@ -10,6 +10,7 @@ All notable changes to Radiata are documented here. The format follows [Keep a C
 - Added Radiata icons for Firmware, Document Scanner, Language Support, Video Player, Characters, Help, and the LibreOffice suite (Start Center, Writer, Calc, Impress, Draw, Base, and Math).
 - Added a dedicated Radiata AppImage MIME icon for Files, desktop file views, and file pickers.
 - Fixed unreadable labels on GNOME logout, restart, and shutdown confirmation buttons.
+- Styled file-action toast notifications and added Radiata icons for more default Ubuntu applications.
 
 ## [1.0.0] - 2026-11-13
 

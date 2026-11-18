@@ -96,7 +96,17 @@ restore_files() {
     restore_backed_up_file "$HOME/.local/share/applications/snap-store_show-updates.desktop" launcher-appstore-updates.desktop
     restore_backed_up_file "$HOME/.local/share/applications/snap-store_packagekit-session-installer.desktop" launcher-appstore-packagekit.desktop
     restore_backed_up_file "$HOME/.local/share/applications/spotify_spotify.desktop" launcher-spotify.desktop
+    restore_optional_file "$HOME/.local/share/applications/firmware-updater_firmware-updater-app.desktop" launcher-firmware-updater-app.desktop
+    restore_optional_file "$HOME/.local/share/applications/firmware-updater_firmware-updater.desktop" launcher-firmware-updater.desktop
+    restore_optional_file "$HOME/.local/share/applications/desktop-security-center_desktop-security-center.desktop" launcher-security-center.desktop
+    restore_optional_file "$HOME/.local/share/applications/thunderbird_thunderbird.desktop" launcher-thunderbird.desktop
     command -v update-desktop-database >/dev/null && update-desktop-database "$HOME/.local/share/applications" >/dev/null 2>&1 || true
+}
+
+restore_optional_file() {
+    local file="$1" backup_name="$2" backup_dir="$STATE/file-backups"
+    [[ -e "$backup_dir/$backup_name.present" || -e "$backup_dir/$backup_name.absent" ]] || return 0
+    restore_backed_up_file "$file" "$backup_name"
 }
 
 restore_gdm_theme() {

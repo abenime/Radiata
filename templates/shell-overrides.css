@@ -451,9 +451,33 @@ StEntry:focus {
 .message {
   color: @TEXT@ !important;
   background-color: rgba(13, 8, 11, 0.97) !important;
-  border: none !important;
+  border: 1px solid rgba(255, 23, 56, 0.72) !important;
   border-radius: 10px !important;
   box-shadow: none !important;
+}
+
+/* Toast notifications, including file actions such as Move to Trash. */
+.notification-banner .notification-button,
+.notification-banner .notification-button StLabel,
+.notification-banner .notification-button .label {
+  color: #ffffff !important;
+  background-color: rgba(26, 13, 18, 0.96) !important;
+  border: 1px solid @ACCENT@ !important;
+  border-radius: 7px !important;
+  box-shadow: none !important;
+}
+
+.notification-banner .notification-button:hover,
+.notification-banner .notification-button:focus,
+.notification-banner .notification-button:active {
+  color: #ffffff !important;
+  background-color: @ACCENT_DIM@ !important;
+  border-color: @ACCENT_BRIGHT@ !important;
+}
+
+.notification-banner .notification-button:last-child {
+  color: #ffffff !important;
+  background-color: @ACCENT_DIM@ !important;
 }
 
 .button,

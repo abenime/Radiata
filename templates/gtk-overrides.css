@@ -305,6 +305,43 @@ tooltip.background {
   border-radius: 6px;
 }
 
+/* Files and other GTK apps use toasts for actions such as Move to Trash. */
+toast,
+.toast,
+overlay > toast {
+  color: @TEXT@;
+  background-color: rgba(13, 8, 11, 0.98);
+  border: 1px solid @ACCENT@;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.72), 0 0 14px rgba(255, 23, 56, 0.16);
+}
+
+toast label,
+.toast label,
+toast .title,
+.toast .title {
+  color: @TEXT@;
+}
+
+toast button,
+.toast button {
+  color: #ffffff;
+  background-image: none;
+  background-color: rgba(26, 13, 18, 0.96);
+  border: 1px solid @ACCENT@;
+  border-radius: 7px;
+  box-shadow: none;
+}
+
+toast button:hover,
+toast button:focus,
+.toast button:hover,
+.toast button:focus {
+  color: #ffffff;
+  background-color: @ACCENT_DIM@;
+  border-color: @ACCENT_BRIGHT@;
+}
+
 separator {
   background-color: rgba(125, 20, 40, 0.48);
 }
