@@ -8,6 +8,8 @@ All notable changes to Radiata are documented here. The format follows [Keep a C
 
 - Repository branding standardized as Radiata.
 - Added Radiata icons for Firmware, Document Scanner, Language Support, Video Player, Characters, Help, and the LibreOffice suite (Start Center, Writer, Calc, Impress, Draw, Base, and Math).
+- Added a dedicated Radiata AppImage MIME icon for Files, desktop file views, and file pickers.
+- Fixed unreadable labels on GNOME logout, restart, and shutdown confirmation buttons.
 
 ## [1.0.0] - 2026-11-13
 

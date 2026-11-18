@@ -474,6 +474,35 @@ StEntry:focus {
   box-shadow: none;
 }
 
+/* End-session buttons must stay readable against the dark modal surface. */
+.modal-dialog .modal-dialog-button-box .modal-dialog-button,
+.end-session-dialog .modal-dialog-button {
+  color: #ffffff !important;
+  background-color: rgba(26, 13, 18, 0.96) !important;
+  border: 1px solid rgba(255, 23, 56, 0.82) !important;
+  box-shadow: none !important;
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:hover,
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:focus,
+.end-session-dialog .modal-dialog-button:hover,
+.end-session-dialog .modal-dialog-button:focus {
+  color: #ffffff !important;
+  background-color: rgba(125, 20, 40, 0.72) !important;
+  border-color: @ACCENT_BRIGHT@ !important;
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:default,
+.modal-dialog .modal-dialog-button-box .modal-dialog-button.suggested-action,
+.modal-dialog .modal-dialog-button-box .modal-dialog-button.destructive-action,
+.end-session-dialog .modal-dialog-button:default,
+.end-session-dialog .modal-dialog-button.suggested-action,
+.end-session-dialog .modal-dialog-button.destructive-action {
+  color: #ffffff !important;
+  background-color: @ACCENT_DIM@ !important;
+  border-color: @ACCENT@ !important;
+}
+
 .slider,
 .level-bar,
 .quick-slider .slider {

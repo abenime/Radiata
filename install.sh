@@ -287,14 +287,14 @@ install_themed_launcher() {
 install_icon_theme() {
     log "Installing expanded red circuit icons and Snap launcher overrides"
     claim_directory "$ICON_DIR"
-    mkdir -p "$ICON_DIR/scalable/places" "$ICON_DIR/scalable/apps" "$ICON_DIR/scalable/actions" "$ICON_DIR/scalable/status"
+    mkdir -p "$ICON_DIR/scalable/places" "$ICON_DIR/scalable/apps" "$ICON_DIR/scalable/actions" "$ICON_DIR/scalable/status" "$ICON_DIR/scalable/mimetypes"
 
     cat > "$ICON_DIR/index.theme" <<EOF
 [Icon Theme]
 Name=$ICON_THEME_NAME
 Comment=Radiata circuit icons with Papirus Dark fallbacks
 Inherits=Papirus-Dark,hicolor
-Directories=scalable/places,scalable/apps,scalable/actions,scalable/status
+Directories=scalable/places,scalable/apps,scalable/actions,scalable/status,scalable/mimetypes
 
 [scalable/places]
 Size=128
@@ -323,6 +323,13 @@ Type=Scalable
 MinSize=16
 MaxSize=512
 Context=Status
+
+[scalable/mimetypes]
+Size=128
+Type=Scalable
+MinSize=16
+MaxSize=512
+Context=MimeTypes
 EOF
 
     local name
@@ -442,6 +449,10 @@ EOF
     done
     for name in org.gnome.Yelp yelp help-browser system-help; do
         cp "$ROOT/assets/icons/help.svg" "$ICON_DIR/scalable/apps/$name.svg"
+    done
+    for name in application-vnd.appimage application-vnd.appimage-symbolic \
+        application-x-iso9660-appimage application-x-iso9660-appimage-symbolic; do
+        cp "$ROOT/assets/icons/appimage.svg" "$ICON_DIR/scalable/mimetypes/$name.svg"
     done
 
     install_themed_launcher /var/lib/snapd/desktop/applications/firefox_firefox.desktop radiata-firefox

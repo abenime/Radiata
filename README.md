@@ -103,7 +103,7 @@ Do not delete that directory while Radiata is installed.
 
 ## Application icons
 
-Radiata includes original red compatibility icons for Firefox, Files, Terminal, Settings, Calculator, Disks, Text Editor, System Monitor, App Center, VS Code, Telegram, Camera, Calendar, Clocks, Resources, VLC, Spotify, GParted, Document Viewer, Image Viewer, Firmware, Document Scanner, Language Support, Video Player, Characters, Help, and LibreOffice Start Center, Writer, Calc, Impress, Draw, Base, and Math.
+Radiata includes original red compatibility icons for Firefox, Files, Terminal, Settings, Calculator, Disks, Text Editor, System Monitor, App Center, VS Code, Telegram, Camera, Calendar, Clocks, Resources, VLC, Spotify, GParted, Document Viewer, Image Viewer, Firmware, Document Scanner, Language Support, Video Player, Characters, Help, AppImage files, and LibreOffice Start Center, Writer, Calc, Impress, Draw, Base, and Math.
 
 Papirus Dark supplies icons that Radiata does not override. Snap launchers that use absolute image paths receive reversible local `.desktop` overrides.
 
