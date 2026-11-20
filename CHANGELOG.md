@@ -11,6 +11,7 @@ All notable changes to Radiata are documented here. The format follows [Keep a C
 - Added a dedicated Radiata AppImage MIME icon for Files, desktop file views, and file pickers.
 - Fixed unreadable labels on GNOME logout, restart, and shutdown confirmation buttons.
 - Styled file-action toast notifications and added Radiata icons for more default Ubuntu applications.
+- Themed the GNOME authentication (sudo/polkit) password prompt with the dark surface, red avatar, password field, and buttons, using a single outer outline.
 
 ## [1.0.0] - 2026-11-13
 

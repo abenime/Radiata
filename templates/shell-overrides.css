@@ -59,7 +59,6 @@ stage {
 .calendar,
 .workspace-switcher,
 .switcher-list,
-.modal-dialog-content,
 .run-dialog,
 .end-session-dialog,
 .screenshot-ui-panel,
@@ -498,8 +497,86 @@ StEntry:focus {
   box-shadow: none;
 }
 
+/* Inner content boxes stay borderless so only the outer dialog edge shows. */
+.modal-dialog .modal-dialog-content-box,
+.modal-dialog-content,
+.prompt-dialog .modal-dialog-content-box {
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+/* Authentication (polkit) prompt: dark surface, readable text, themed password entry. */
+.modal-dialog,
+.prompt-dialog {
+  color: @TEXT@ !important;
+  background-color: rgba(8, 5, 7, 0.98) !important;
+  border: 1px solid rgba(255, 23, 56, 0.46) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.76) !important;
+}
+.modal-dialog .message-dialog-title,
+.modal-dialog .message-dialog-description,
+.prompt-dialog-headline,
+.prompt-dialog-description,
+.prompt-dialog-error-label,
+.prompt-dialog-info-label,
+.prompt-dialog-password-layout StLabel,
+.prompt-dialog-password-box StLabel,
+.prompt-dialog .user-widget-label,
+.prompt-dialog .user-widget .user-widget-label,
+.prompt-dialog .login-dialog-prompt-label {
+  color: @TEXT@ !important;
+  font-family: "@FONT@", monospace !important;
+  text-shadow: none !important;
+}
+.prompt-dialog-headline {
+  color: @ACCENT_BRIGHT@ !important;
+  font-weight: bold;
+}
+.prompt-dialog-error-label {
+  color: @ACCENT_BRIGHT@ !important;
+}
+.prompt-dialog .user-icon,
+.prompt-dialog .user-widget .user-icon {
+  color: @ACCENT_BRIGHT@ !important;
+  background-color: rgba(26, 13, 18, 0.96) !important;
+  border: 1px solid rgba(255, 23, 56, 0.60) !important;
+  box-shadow: none !important;
+}
+.prompt-dialog-password-entry,
+.prompt-dialog StEntry,
+.modal-dialog StPasswordEntry {
+  color: #ffffff !important;
+  caret-color: @ACCENT_BRIGHT@;
+  selection-background-color: @ACCENT_DIM@;
+  selected-color: #ffffff;
+  background-color: rgba(26, 13, 18, 0.96) !important;
+  border: 1px solid rgba(255, 23, 56, 0.60) !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+.prompt-dialog-password-entry:focus,
+.prompt-dialog StEntry:focus,
+.modal-dialog StPasswordEntry:focus {
+  border-color: @ACCENT_BRIGHT@ !important;
+  box-shadow: 0 0 0 1px rgba(255, 23, 56, 0.40) !important;
+}
+.prompt-dialog-password-entry StIcon,
+.prompt-dialog StEntry StIcon,
+.modal-dialog StPasswordEntry StIcon {
+  color: @ACCENT_BRIGHT@ !important;
+}
+.prompt-dialog-password-entry StEntry,
+.prompt-dialog-password-entry StPasswordEntry,
+.prompt-dialog-password-box StEntry {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
 /* End-session buttons must stay readable against the dark modal surface. */
 .modal-dialog .modal-dialog-button-box .modal-dialog-button,
+.prompt-dialog .modal-dialog-button,
 .end-session-dialog .modal-dialog-button {
   color: #ffffff !important;
   background-color: rgba(26, 13, 18, 0.96) !important;

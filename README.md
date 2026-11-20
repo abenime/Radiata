@@ -19,7 +19,7 @@ Radiata is a red matrix cyberpunk **Ubuntu GNOME theme**. It packages a dark **G
 ## Features
 
 - **Complete desktop identity:** GTK 3, GTK 4, libadwaita overrides, GNOME Shell, Ubuntu Dock, and GDM.
-- **Black and red Shell UI:** panel, overview, app grid, notifications, calendar, quick settings, dialogs, search, and lock screen.
+- **Black and red Shell UI:** panel, overview, app grid, notifications, calendar, quick settings, dialogs (including the authentication password prompt), search, and lock screen.
 - **Floating dock:** fully transparent dock background with restrained running indicators and no hover tiles.
 - **Custom icon layer:** folders and common Ubuntu applications, with Papirus Dark fallback for full coverage.
 - **Custom cursor family:** pointer, link, text, busy, move, resize, help, and forbidden states at four sizes.
